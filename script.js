@@ -46,9 +46,10 @@ const createMenu = (data) => {
         <div class="card-body">
           <h5 class="card-title">${data.name}</h5>
           <p class="card-text">${data.price}</p>
-          <a id=${data.id} href="#" class="btn btn-primary cartBtn">加入購物車</a>
+          <a id=${data.id} href="#" class="btn btn-primary cartBtn">加入購物車</a>  
         </div>
      </div>`;
+     // id在按鈕能知道哪個品項被觸發 之後能作為條件避免同品項出現兩次(?)
   menu.append(menuCol);
 }
 
@@ -103,7 +104,7 @@ menu.addEventListener("click", calculateSumAfterClick);
 
 
 const checkPurchase = () => {
-  if (confirm("感謝購買")) {
+  if (confirm("請確認您的訂單")) {
     while (cart.children.length > 0) {
       cart.children[0].remove();
     }
