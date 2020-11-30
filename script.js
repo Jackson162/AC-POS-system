@@ -112,13 +112,6 @@ const checkPurchase = () => {
     let totalAmount = document.querySelector("#total-amount");
     totalAmount.innerHTML = `--`
 
-    //dumb solution:
-    // let multiPurchase = document.querySelectorAll("ul#cart > li");
-    // while (multiPurchase.length > 0) {
-    //   purchase = document.querySelector("ul#cart > li");
-    //   cart.removeChild(purchase);
-    //   multiPurchase = document.querySelectorAll("ul#cart > li"); //have to update it after removeChild (if before, there will be an extra round)
-    // }    
   }  
 }
 
